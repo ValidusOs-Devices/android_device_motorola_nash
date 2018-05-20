@@ -10,8 +10,8 @@
     "branch": "master"
   },
   {
-    "repository": "GZR-Kernels/kernel_motorola_nash",
-    "target_path": "kernel/motorola/nash",
+    "repository": "GZR-Kernels/kernel_motorola_msm8998",
+    "target_path": "kernel/motorola/msm8998",
     "branch": "8.1"
   },
   {
