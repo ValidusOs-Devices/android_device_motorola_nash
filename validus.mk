@@ -1,9 +1,10 @@
-# Inherit some common Lineage stuff.
+# Inherit some common Validus stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/validus/config/common_full_phone.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
 
 # Vendor blobs
 $(call inherit-product-if-exists, vendor/motorola/nash/nash-vendor.mk)
@@ -57,9 +58,12 @@ else
 TARGET_RECOVERY_FSTAB := device/motorola/nash/rootdir/etc/fstab.qcom
 endif
 
+# Maintainer info
+PRODUCT_BUILD_PROP_OVERRIDES += DEVICE_MAINTAINERS="Anthony Pyrtle (Yayo)"
+
 # Device identifiers
 PRODUCT_DEVICE := nash
-PRODUCT_NAME := lineage_nash
+PRODUCT_NAME := validus_nash
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := Moto Z2
 PRODUCT_MANUFACTURER := Motorola
